@@ -13,7 +13,7 @@ public:
             globalmax = max(globalmax , localmax);
         }
         int localmin = arr[0];
-        int globalmin = *min_element(arr.begin() , arr.end());
+        int globalmin = arr[0];
         for(int i = 1 ; i < n ; i++){
             if(localmin + arr[i] > arr[i]){
                 localmin = arr[i];
