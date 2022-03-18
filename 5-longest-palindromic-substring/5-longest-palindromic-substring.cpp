@@ -19,7 +19,7 @@ public:
        }
     //   abba
     //   0123
-        for(int mid = 0 ; mid < n -  1 ; mid++){
+        for(int mid = 0 ; mid < n ; mid++){
            for(int j = 0 ; (mid-j) >= 0 && (mid+j+1) < n ; j++){
                 if(S[mid-j] == S[mid + j + 1]){
                     if(( 2*j  + 2) > len){
