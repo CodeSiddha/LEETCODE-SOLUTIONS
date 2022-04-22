@@ -1,9 +1,9 @@
-vector<int> mpp(1000001);
+int mpp[1000001];
 // mpp.resize();
 class MyHashMap {
 public:  
     MyHashMap() {  
-        fill(mpp.begin() , mpp.end() , -1);
+        fill(mpp , mpp + 1000001 , -1);
     }
     
     void put(int key, int value) {
