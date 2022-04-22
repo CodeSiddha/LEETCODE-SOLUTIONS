@@ -1,8 +1,8 @@
+vector<int> mpp(1000001);
+// mpp.resize();
 class MyHashMap {
-public:
-    vector<int> mpp;
-    MyHashMap() {
-        mpp.resize(1000001);
+public:  
+    MyHashMap() {  
         fill(mpp.begin() , mpp.end() , -1);
     }
     
