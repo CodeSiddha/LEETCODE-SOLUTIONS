@@ -3,7 +3,11 @@ public:
     
     unordered_map<int , pair<string , int>> entry;
     unordered_map<string , pair<double , int>> route;
-    UndergroundSystem() {}
+    UndergroundSystem() {
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
+        cout.tie(NULL);
+    }
     
     void checkIn(int id, string stationName, int t) {
         entry[id] = {stationName , t};
