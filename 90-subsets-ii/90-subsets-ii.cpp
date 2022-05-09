@@ -2,7 +2,6 @@ class Solution {
 public:
     void solve(int i , int n , vector<int>&nums ,vector<int> temp, set<vector<int>>&ans){
         if(i == n){
-            sort(temp.begin() , temp.end());
             ans.insert(temp);
             return;
         }
@@ -16,6 +15,7 @@ public:
     vector<vector<int>> subsetsWithDup(vector<int>& nums) {
         set<vector<int>> ans;
         int n = nums.size();
+        sort(nums.begin() , nums.end());
         solve(0 , n , nums, {} , ans);
         vector<vector<int>> result;
         for(auto &x : ans){
