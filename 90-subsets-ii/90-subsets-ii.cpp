@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void solve(int i , int n , vector<int>&nums ,vector<int> temp, vector<vector<int>>&ans){
+    void solve(int i , int n , vector<int>&nums ,vector<int>&temp, vector<vector<int>>&ans){
         ans.push_back(temp);
         for(int idx = i ; idx < n ; idx++){
             temp.push_back(nums[idx]);
@@ -15,7 +15,8 @@ public:
         vector<vector<int>> ans;
         int n = nums.size();
         sort(nums.begin() , nums.end());
-        solve(0 , n , nums, {} , ans);
+        vector<int> temp;
+        solve(0 , n , nums, temp , ans);
         return ans;
     }
 };
