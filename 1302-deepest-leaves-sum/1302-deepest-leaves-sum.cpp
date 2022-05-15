@@ -34,7 +34,6 @@ public:
     int deepestLeavesSum(TreeNode* root) {
         int height = findh(root);
         int res = 0;
-        int  ans = findDeepSum(root , height , res);
-        return ans;
+        return findDeepSum(root , height , res);
     }
 };
