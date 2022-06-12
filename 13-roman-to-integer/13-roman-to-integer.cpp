@@ -11,17 +11,13 @@ public:
         roman['D'] = 500;
         roman['M'] = 1000;
         vector<int> nums;
-        nums.push_back(roman[s[n - 1]]);
+        int ans = roman[s[n - 1]];
         for(int i = n - 2 ; i >= 0 ; i--){
-            if(roman[s[i]] < nums.back()){
-                nums.back() = nums.back() - roman[s[i]];
+            if(roman[s[i]] < roman[s[i + 1]]){
+                ans = ans - roman[s[i]];
             }else{
-                nums.push_back(roman[s[i]]);
+                ans += roman[s[i]];
             }
-        }
-        int ans = 0;
-        for(int i = 0 ; i < (int)nums.size() ; i++){
-            ans += nums[i];
         }
         return ans;
     }
