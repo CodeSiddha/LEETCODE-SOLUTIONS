@@ -1,6 +1,6 @@
 class Solution {
 public:
-    string rev(string s){
+    string rev(string &s){
         int n = s.size();
         for(int i = 0 ; i < n / 2 ; i++){
             swap(s[i] , s[n - i - 1]);
@@ -11,7 +11,6 @@ public:
         int n = s.size();
         string ans = "";
         bool st = false;
-        int j = 0;
         string loc = "";
         for(int i = 0 ; i < n ; i++){
             if(s[i] != ' '){
