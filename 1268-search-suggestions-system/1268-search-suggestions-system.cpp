@@ -8,7 +8,7 @@ public:
         sort(products.begin() , products.end());
         int m = searchWord.size();
         for(int i = m - 1 ; i >= 0 ; i--){
-            string searchThis = searchWord.substr(0 , i + 1);
+            string searchThis = searchWord;
             vector<string> candidates;
             int searchSize = searchThis.size();
             for(int i = 0 ; i < n ; i++){
@@ -18,6 +18,7 @@ public:
                     candidates.push_back(products[i]);
                 }
             }
+            searchWord.pop_back();
             ans.push_back(candidates);
         }
         reverse(ans.begin() , ans.end());
